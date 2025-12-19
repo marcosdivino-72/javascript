@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Verificar a velocidade</h1>
+    <input type="number" name="textvel" id="textvel">
+    <input type="button" value="Verificar" onclick="vMulta()">
+    <p id="vevel"></p>
+    <div>
+        <h1>Verificar pais</h1>
+        <input type="text" name="pais" id="pais">
+        <input type="button" value="verificar" id="verificar">
+        <p id="vepais"></p>
+    </div>
+    <script>
+         var paisv=document.getElementById("verificar")
+            paisv.addEventListener("click",fpais)
+        function vMulta(){
+           
+
+            var textvel =document.getElementById("textvel")
+            var vel=Number(textvel.value)
+            var v=document.getElementById("vevel")
+            if(vel>60){
+                v.innerHTML="Multado!! velocidade acima de 60km/h: sua velocidade e:" +vel+" km/h"
+                v.style.color="red"
+
+            }else{
+                v.innerHTML="Boa viagem, sua velocidade e de:"+vel+" km/h"
+                v.style.color="green"
+
+            }
+          
+            
+
+          
+        }
+          function fpais(){
+                var pv=document.getElementById("vepais")
+                var vp =document.getElementById("pais")
+                var p = vp.value
+                var M = p.toLocaleUpperCase()
+              
+            
+
+                
+
+                if(M=="BRASIL"){
+                    pv.innerHTML="você e <Strong>BR</Strong>"
+
+                }else{
+                      pv.innerHTML="você e <Strong>estrangeiro</Strong>"
+                }
+
+            }
+
+    </script>
+    
+</body>
+</html>
