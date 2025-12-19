@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comando de saida</title>
+    <style>
+       body > div{
+        
+        margin: auto;
+        
+       }
+        div{
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            line-height: 250px;
+            font-size: 30px ;
+            font-weight: normal;
+            color:  white;
+        }
+    </style>
+</head>
+<body>
+    <div id="are" >
+        interaja
+    </div>
+    <script >
+
+        var a =document.getElementById('are')
+        a.addEventListener("click" , clicar)
+        a.addEventListener("mouseenter" , entrou)
+        a.addEventListener("mouseout" , saiu)
+
+
+        function clicar(){
+
+            a.innerText="clicou"
+            a.style.backgroundColor="red"
+        }
+        function entrou(){
+              a.innerText="entrou"
+              a.style.backgroundColor="green"
+
+        }
+        function saiu(){
+              a.innerText="saiu"
+              a.style.backgroundColor= "blue"
+
+        }
+        function mvendo(){
+              a.innerText="movendo"
+
+        }
+      
+       
+       
+
+
+    </script>
+    
+</body>
+</html>
