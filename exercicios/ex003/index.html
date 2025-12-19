@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>procotico calculadora</title>
+    <style>
+        body{
+            font: normal 20px monospace;
+            
+        }
+        p{
+            border: solid 2px black;
+            width: 300px;
+            background-color: rgb(0, 0, 255);
+            color: white;
+            
+        }
+     
+
+        
+    </style>
+</head>
+<body>
+    <h1>fazendo calculo   </h1>
+   <input type="number" name="txt1" id="text1">+
+   <input type="number" name="txt2" id="text2">
+   <input type="button" value="somar" onclick="somar()">
+
+   <p id="resultado">Resoltado:0</p>
+   
+   
+   <script>
+     var t1=document.getElementById("text1")
+        var t2=document.getElementById("text2")
+         var resultado= document.getElementById("resultado")
+        var n1= Number(t1.value)
+        var n2 = Number(t2.value)
+     
+    function somar(){
+       
+        var t1=document.getElementById("text1")
+        var t2=document.getElementById("text2")
+         var resultado= document.getElementById("resultado")
+        var n1= Number(t1.value)
+        var n2 = Number(t2.value)
+        
+        var r = n1+n2
+        resultado.innerHTML="Resoltado:"+r
+
+
+    }
+
+
+       
+      
+
+      
+      
+
+    </script>
+    
+</body>
+</html>
