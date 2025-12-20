@@ -4,11 +4,12 @@ var horas = agora.getHours()
 var min = agora.getMinutes()
 var corpo = document.getElementById("corpo");
 var img = document.getElementById("img");
+horas=1
 
 
 ditarHora.innerHTML=horas+":"+min
 if(horas<12 && horas>=1){
-    corpo.style.backgroundColor ="#c5f577"
+    corpo.style.backgroundColor ="#D4A50E"
     img.style.backgroundImage= "url(imagens/cafe-da-manha.jpg)";
     
 
