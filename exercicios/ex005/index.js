@@ -13,17 +13,15 @@ if(horas<12 && horas>=1){
     img.style.backgroundImage= "url(imagens/cafe-da-manha.jpg)";
     
 
-}if (horas<18 && horas >12) {
+}else if (horas<18 && horas >12) {
     corpo.style.backgroundColor ="#916149"
      img.style.backgroundImage= "url(imagens/paisagem-tarde.jfif)";
     
-} if (horas>=18 && horas<0) {
+} else if (horas>=18 && horas<0) {
    
      img.style.backgroundImage= "url(imagens/images.jfif)";
       corpo.style.backgroundColor ="#4c5666ff"
     
-}else{
-
 }
     
     
