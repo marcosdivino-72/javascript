@@ -13,7 +13,7 @@ if(horas<12 && horas>=1){
     
 
 }if (horas<18 && horas >12) {
-    corpo.style.backgroundColor ="#4e450eff"
+    corpo.style.backgroundColor ="#916149"
      img.style.backgroundImage= "url(imagens/paisagem-tarde.jfif)";
     
 } if (horas>=18 && horas<0) {
