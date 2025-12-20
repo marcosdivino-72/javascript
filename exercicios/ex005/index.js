@@ -4,7 +4,7 @@ var horas = agora.getHours()
 var min = agora.getMinutes()
 var corpo = document.getElementById("corpo");
 var img = document.getElementById("img");
-horas=1
+
 
 
 ditarHora.innerHTML=horas+":"+min
