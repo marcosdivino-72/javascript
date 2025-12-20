@@ -3,7 +3,7 @@ var agora = new Date()
 var horas = agora.getHours()
 var min = agora.getMinutes()
 var corpo = document.getElementById("corpo");
-var img = document.getElementById("img");
+var img = document.getElementById("img"); 
 
 
 
