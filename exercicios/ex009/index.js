@@ -1,15 +1,18 @@
 
-
-
+let tempo
+let data = new Date();
+ let s =  data.getSeconds()
 
  function ativar(){
-  tempo =  setInterval(function(){
-cronometro= document.getElementById("h2").innerHTML
-var soma = parseInt(cronometro)+1
-document.getElementById("h2").innerHTML=soma
-
-
-   },1000)
+ 
+  tempo=setInterval(function(){
+ 
+ let data = new Date();
+ let s =  data.getSeconds()
+ 
+document.getElementById("h2").innerHTML=s
+ 
+  })
 
    
 
@@ -17,5 +20,5 @@ document.getElementById("h2").innerHTML=soma
 }
 function parar(){
 
-    clearInterval(tempo);
+  clearInterval(tempo)
 }
