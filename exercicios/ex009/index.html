@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settimeout e setinteval</title>
+    <style>
+        div{
+            margin-top: 100px;
+          text-align: center;
+         
+        }
+        button{
+            width: 200px;
+            height: 100px;
+            margin: 0 10px;
+            border: none;
+        }
+        #ativar{
+            background-color: green;
+        }
+        #parar{
+            background-color: red;
+        }
+        button:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Controle de tempo</h1>
+        <h2 id="h2">0</h2>
+        <button id="ativar" onclick="ativar()">ativar contagem</button>
+        <button id="parar" onclick="parar()">parar contagem</button>
+    </div>
+
+    
+</body>
+<script src="index.js"></script>
+</html>
