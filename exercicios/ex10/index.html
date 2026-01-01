@@ -34,23 +34,33 @@
            
         }
         .text-time{
-            font-size: 40px;
+            font-size: 20px;
             
             margin: 0;
             margin-top: 20px;
+            display: block;
            
 
+        }
+        samp{
+            position: relative;
+            top: 10px;
+             font-size: 40px;
         }
     </style>
 </head>
 <body>
 
     <div id="time">
-        <div id="hr"><p class="text-time">00</p><p>Horas</p></div>
-         <div id="min"><p class="text-time">00</p><p>Minutos</p></div>
-          <div id="s"><p class="text-time">00</p><p>Segudos</p></div>
+        <div ><samp id="hr">00</samp>
+            <samp class="text-time">Horas</samp></div>
+         <div ><samp id="min">00</samp>
+            <samp class="text-time">Minutos</samp></div>
+          <div ><samp id="s">00</samp>
+            <samp class="text-time">Segundos</samp></div>
         
     </div>
     
 </body>
+<script src="index.js"></script>
 </html>
