@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .visivel{
+
+            width: 50vw;
+            height: 80vh;
+            background-color: aqua;
+             opacity: 1;
+              transition: .3s;
+              transition-timing-function: ease-in;
+             transform: translateX(0);
+        }
+        .oculto{
+             width: 50vw;
+            height: 80vh;
+            background-color: black;
+            position: relative;
+             opacity: 0;
+              transition: .3s;
+               transition-timing-function: ease-in;
+            transform: translateX(-1000px);
+
+
+        }
+        button{
+            padding: 10px;
+            position: relative;
+            left: 50vw;
+            top: 20px;
+        }
+        
+        .linha{
+            width: 40px;
+            height: 4px;
+            margin-bottom: 8px;
+          
+            background-color: black;
+        }
+        #menu{
+           
+           margin-left: 200px;
+          cursor: pointer;
+           
+        }
+
+
+    </style>
+</head>
+<body id="body" >
+    
+        
+        <div id="menu">
+            <div class="linha"></div>
+            <div class="linha"></div>
+            <div class="linha"></div>
+        </div>
+    
+
+    <div class="visivel" id="div"></div>
+    
+</body>
+<script src="index.js"></script>
+</html>
