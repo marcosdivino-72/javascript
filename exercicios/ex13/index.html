@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista de tarefas</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            font-family:Georgia, 'Times New Roman', Times, serif
+        }
+        article{
+          position: relative;
+          top: 100px;
+            background-color: white;
+            width: 500px;
+           margin: auto;
+            min-height: 200px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.644);
+        }
+        #shead{
+             
+            text-align: center;
+            
+
+
+        }
+       ul{
+        list-style-type: none;
+        background-color: white;
+       }
+       #button{
+
+        background-color: orangered;
+        border: none;
+        padding: 3px;
+        border-radius: 3px;
+       }
+     #lista{
+        width: 200px;
+        min-height: 150px;
+        background-color: rgb(145, 145, 250);
+        
+        padding: 10px 10px;
+        box-shadow: 0 0 5px rgb(89, 89, 145);
+        
+     }
+     li{ cursor: pointer;}
+    </style>
+</head>
+<body>
+
+    <article>
+        <section id="shead">
+            <h1>Lista de tarefas</h1>
+
+            <input type="text" name="textl" id="textl" autocomplete="off"> <input type="button" value="Adicionar" id="button">
+
+        </section id="sbody">
+        <section>
+            <ul id="lista">
+                Sua lista:
+            </ul>
+
+        </section>
+    </article>
+    
+</body>
+<script src="index.js"></script>
+</html>
