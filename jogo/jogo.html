@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+             -webkit-user-select: none;
+             -webkit-user-drag: none; 
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+           
+            background-image: url("imagens/bg.jpg");
+            background-size:100vw 100vh;
+            background-repeat: no-repeat;
+            cursor: url("imagens/mata_mosca.png"), pointer;
+            overflow: hidden;
+            
+            
+        }
+
+        .mosca{
+
+            width: 50px;
+            left: 50px;
+            position: relative;
+           
+  
+
+
+        }
+        #gameover{
+           text-align: center;
+          
+           position: absolute;
+           left: 50vw;
+           top: 50vh;
+           transform: translate(-50% ,-50%);
+        }
+        P{
+            font-size: 1.4EM;
+            color: red;
+        }
+        .b{
+            padding: 10px 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onresize="posicaotela()">
+
+    <div><img id="c1" src="imagens/coracao_cheio.png" alt=""><img id="c2" src="imagens/coracao_cheio.png" alt=""><img id="c3" src="imagens/coracao_cheio.png" alt=""><P id="time">TIME:60</P>
+    </div>
+
+    <divi id="gameover"> </div>
+       <audio autoplay>
+        <source src="videoplayback.weba" type="">
+       </audio>
+    
+</body>
+<script src="index.js">
+   
+</script>
+
+
+</html>
