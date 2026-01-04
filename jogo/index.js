@@ -126,6 +126,7 @@ function gameover(){
     button.className="b"
     button.setAttribute("onclick","window.location.href='index.html'")
     let div = document.querySelector("#gameover")
+    div.appendChild(document.createElement('br'))
     div.appendChild(button)
     if(document.querySelector("#mosca")){
 
