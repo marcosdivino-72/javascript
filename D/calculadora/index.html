@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+              -webkit-user-select: none;
+           
+        }
+        body{
+            background-color:blueviolet;
+          font-family: Arial, Helvetica, sans-serif
+        }
+      td{
+        background-color: rgb(44, 43, 43);
+
+        
+       border: 1px solid black;
+       padding: 20px;
+       cursor: default;
+       
+      }
+      td:hover{
+
+        background-color: aqua;
+      }
+      input{
+
+       color: black;
+
+        height: 40px;
+        width: 205px;
+        background-color: white;
+        font-size: 1.7em;
+      }
+      main{
+
+        position: relative;
+        top: 50vh;
+        transform: translateY(-50%);
+        background-color: black;
+        color: white;
+        margin: auto;
+        width: 210px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      div{
+        text-align: center;
+        
+      }
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <div><h1>Calculadora</h1>
+            <input type="text" id="tela" disabled dir="rtl" value="4">
+        
+        
+        
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td id="sete">7</td>
+                     <td id="oito">8</td>
+                      <td id="nove">9</td>
+                       <td id="*">*</td>
+                </tr>
+                <tr>
+                    <td id="quatro">4</td>
+                     <td id="cinco">5</td>
+                      <td id="seis">6</td>
+                       <td id="-">-</td>
+                </tr>
+                 <tr>
+                    <td id="um">1</td>
+                     <td id="dois">2</td>
+                      <td id="tres">3</td>
+                       <td id="+">+</td>
+                </tr>
+                <tr>
+                    <td id="zero">0</td>
+                     <td id=",">,</td>
+                      <td colspan="2" id="=">=</td>
+                     
+                </tr>
+                 
+            </table>
+
+
+        </div>
+    </main>
+    
+</body>
+<script src="index.js"></script>
+</html>
