@@ -34,8 +34,8 @@ for (i of num){
 
 
 
-let caractere =["+","-","*"]
-console.log(caractere[0])
+let caractere =["+","-","*","/","."]
+
 if(primeironum==true){
 for(i in caractere){
  if(e.key==caractere[i]){
@@ -49,6 +49,26 @@ break
 
 
 console.log(Number(tela.value))
+
+addEventListener("keyup", (e)=>{
+console.log( )
+if(e.key=="Enter" && tela.value!=""){
+
+     document.querySelector('#tela').value=eval(tela.value)
+}
+
+
+if(e.key=="Backspace"){
+
+
+ document.querySelector('#tela').value=""
+
+ 
+ 
+}
+
+
+})
 
 //let tela = document.querySelector('#tela').value+=e.key
 
