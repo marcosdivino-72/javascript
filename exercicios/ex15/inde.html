@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando a class</title>
+
+    <style>
+
+        .textinvalido{
+            background-color: red;
+        }
+        .textvalido{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="text" id="text" >
+    
+</body>
+<script>
+const text = document.getElementById("text")
+ function focado(){
+
+
+}
+function desfocado(){
+
+    if(text.value.length<3){
+
+text = document.createAttribute('class','texinvalido')
+    }else{
+        text.classList='textvalido';
+    }
+}
+
+addEventListener("click",()=>{
+
+
+    text.className='textinvalido'
+    console.log(text.className)
+})
+
+</script>
+</html>
