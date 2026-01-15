@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self</title>
+
+    <style>
+        *{margin:0;
+          padding:0;
+          box-sizing:0; }
+
+          header{
+            background-color: gray;
+            height: 100px;
+            display: flex;
+            align-content: flex-start;
+            flex-flow: row-reverse wrap-reverse;
+            justify-content: flex-end;
+          
+           
+          }
+          ul{
+            list-style-type: none;
+           
+          }
+          li{
+            display: inline-block;
+
+            background-color: black;
+            color: white;
+           flex: auto;
+         padding: 10px;
+           margin-bottom: 10px;
+         
+            cursor: pointer;
+
+            
+        }
+        h1{
+            color: white;
+           margin: 10px;
+            flex: 1 0 150px;
+            
+            align-self: stretch;
+         
+        }
+     
+    </style>
+</head>
+<body>
+<header>
+   
+    <nav><ul>
+        <li>Opiçao1</li>
+        <li>Opiçao2</li>
+        <li>Opiçao3</li>
+        <li>Opiçao4</li>
+        <li>Opiçao5</li>
+        <li>Opiçao6</li>
+    </ul></nav>
+     <h1>Meu site</h1>
+</header>
+   
+    
+</body>
+</html>
