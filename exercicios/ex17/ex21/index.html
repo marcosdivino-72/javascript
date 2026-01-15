@@ -6,51 +6,133 @@
     <title>align-self</title>
 
     <style>
+
         *{margin:0;
           padding:0;
-          box-sizing:0; }
+          box-sizing:0;
+          font-family: Arial, Helvetica, sans-serif;
+        
+        }
 
           header{
-            background-color: gray;
-            height: 100px;
             display: flex;
-            align-content: flex-start;
-            flex-flow: row-reverse wrap-reverse;
-            justify-content: flex-end;
-          
-           
+            flex-flow: row wrap;
+            align-content: flex-end;
+            background-color:rgb(255, 0, 0);
+            height: 100px;
+            padding: 10px;
+
           }
           ul{
             list-style-type: none;
            
+         height:40px
           }
           li{
             display: inline-block;
-
-            background-color: black;
-            color: white;
-           flex: auto;
-         padding: 10px;
-           margin-bottom: 10px;
-         
+            color: black;
+            background-color: white;
+            padding: 10px;
             cursor: pointer;
+            transition: .2s ease;
+            border-radius:5px;
+        
 
-            
-        }
-        h1{
+          }
+          li:hover{
+        
+              padding: 12px;
+              color: rgb(17, 0, 255);
+          }
+         #menuh1{
+    
+            flex: 1 0 200px;
             color: white;
-           margin: 10px;
-            flex: 1 0 150px;
-            
-            align-self: stretch;
+             text-align: start;
+           
+       
+          
+
+          }
+          main{
+            background-color: white;
+           max-width: 800px;
+           padding: 12px;
+            margin: auto;
          
-        }
-     
+          }
+          p{
+            text-align: justify;
+            text-indent:10px;
+             line-height: 1.5;
+            
+          }
+       #h1main{
+              line-height: 2.5;
+             text-align: center;
+          }
+                @media screen and (max-width: 540px) {
+
+                  body{
+                        overflow-x: hidden;
+                  }
+header{
+            display: flex;
+            flex-flow: column wrap;
+            width: 100vw;
+            padding: 0;
+        
+           
+          
+            background-color:rgb(255, 0, 0);
+            height: 300px;
+           align-items:stretch ;
+
+          }
+            #menuh1{
+        
+          flex: 0 1 auto;
+          display: block;
+           
+            color: white;
+            text-align: center;
+            
+           
+       
+          
+
+          }
+          ul{
+           
+           display: flex;
+           flex-flow: column nowrap;
+           align-items: stretch ;
+         
+            width: 100vw;
+          
+            list-style-type: none;
+         
+           
+          
+         
+       
+          }
+          li{
+            text-align: center;
+            margin: 2px ;
+           
+            flex: 1 0 auto;
+          }
+
+      }
+
+
+       
     </style>
 </head>
 <body>
 <header>
-   
+    <h1 id="menuh1">Meu site</h1>
     <nav><ul>
         <li>Opiçao1</li>
         <li>Opiçao2</li>
@@ -59,8 +141,23 @@
         <li>Opiçao5</li>
         <li>Opiçao6</li>
     </ul></nav>
-     <h1>Meu site</h1>
+    
 </header>
+<main>
+  <article>
+    <h1 id="h1main">Teste menu flex-box</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis harum, quae repellendus eveniet praesentium debitis? Pariatur voluptatem expedita adipisci optio libero ipsa dignissimos iusto tempora deserunt aut. Assumenda, vel distinctio.
+    Non porro optio adipisci deleniti provident libero eius. Explicabo, praesentium ipsum. Natus optio doloremque ratione saepe earum hic repellat expedita, sit cum aspernatur voluptas quo rerum itaque rem qui vero?
+    Nam at tempora accusantium excepturi doloribus sint dicta! Exercitationem sint sed labore ea, qui non facilis illo repudiandae ab quia saepe iure, quod, deleniti ratione ex quae aut doloremque at!
+    Unde harum, quibusdam blanditiis exercitationem ipsa facere nisi minus nemo eum. Consectetur eum ea labore molestias repellat optio. Temporibus iusto fugit dolore esse omnis consequuntur fugiat, amet voluptatem quaerat illo.
+    Sequi perspiciatis aperiam quis culpa, excepturi accusamus cum rem alias voluptatem vitae inventore porro sed non, quo dolores eius nam cumque quas officiis quam voluptates est! Hic officiis tempore accusamus.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis harum, quae repellendus eveniet praesentium debitis? Pariatur voluptatem expedita adipisci optio libero ipsa dignissimos iusto tempora deserunt aut. Assumenda, vel distinctio.
+    Non porro optio adipisci deleniti provident libero eius. Explicabo, praesentium ipsum. Natus optio doloremque ratione saepe earum hic repellat expedita, sit cum aspernatur voluptas quo rerum itaque rem qui vero?
+    Nam at tempora accusantium excepturi doloribus sint dicta! Exercitationem sint sed labore ea, qui non facilis illo repudiandae ab quia saepe iure, quod, deleniti ratione ex quae aut doloremque at!
+    Unde harum, quibusdam blanditiis exercitationem ipsa facere nisi minus nemo eum. Consectetur eum ea labore molestias repellat optio. Temporibus iusto fugit dolore esse omnis consequuntur fugiat, amet voluptatem quaerat illo.
+    Sequi perspiciatis aperiam quis culpa, excepturi accusamus cum rem alias voluptatem vitae inventore porro sed non, quo dolores eius nam cumque quas officiis quam voluptates est! Hic officiis tempore accusamus.</p>
+  </article>
+</main>
    
     
 </body>
