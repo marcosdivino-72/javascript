@@ -6,6 +6,86 @@
     <title>Calculadora</title>
 </head>
 <body>
+    <style>
+        *{margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 800;
+            font-size: 1.1rem;
+
+
+}
+        td{
+            border: solid 1px black;
+            text-align: center;
+            padding: 30px;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align:end;
+            border: none;
+            padding:2px;
+            
+        }
+    </style>
+
+    <div id="conteiner">
+        <div id="visor">
+            <input type="text" name="" id="tela" value="0">
+        </div>
+        <div>
+            <table>
+                <tr>
+                   
+                    <td colspan="3">c</td>
+                
+                    <td id="th">/</td>
+                
+                </tr>
+                <tr>
+                    <td id="t7">7</td>
+                    <td id="t8">8</td>
+                    <td id="t9">9</td>
+                    <td id="tmais">+</td>
+                
+                </tr>
+                <tr>
+                    <td id="t4">4</td>
+                    <td id="t5">5</td>
+                    <td id="t6">6</td>
+                    <td id="tmenos">-</td>
+                
+                </tr>
+                <tr>
+                    <td id="t1">1</td>
+                    <td id="t2">2</td>
+                    <td id="t3">3</td>
+                    <td id="tx">*</td>
+                
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td id="tp">.</td>
+                    <td colspan="2" id="somar">=</td>
+                 
+                
+                </tr>
+               
+               
+
+            </table>
+        </div>
+    </div>
     
 </body>
+<script src="index.js"></script>
 </html>

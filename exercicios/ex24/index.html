@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      background: blue;
+    }
+    #conteiner{
+        margin: auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        background-color: blue;
+        justify-content: space-evenly;
+        width: 300px;
+        padding: 10px;
+        box-shadow: 0 0 5px rgb(20, 20, 20) ;
+    }
+    .visor{
+        
+        color: white;
+        text-align: center;
+        font-size: 1.8em;
+        line-height: 50px;
+        
+        
+        width: 60px;
+        height: 70px;
+        background-color: black;
+       
+    }
+</style>
+<body>
+
+    <div id="conteiner">
+        <div id="horas"  class="visor">00</div>
+        <div id="minutos" class="visor">00</div>
+        <div id="segundos" class="visor">00</div>
+        <div id="milessegundos" class="visor">00</div>
+    </div>
+    
+</body>
+<script src="index.js"></script>
+</html>
