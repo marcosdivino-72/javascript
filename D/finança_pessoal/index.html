@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finaça pessoal</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+          
+            background-color:#007BFF;
+            padding: 8px;
+          
+            
+            
+
+        }
+        nav{
+              display: flex;
+               flex-flow: row nowrap;
+               align-items: center;
+        }
+        header #div_img{
+          text-align: end;
+         display:block;
+         flex: 1 0 200px;
+        }
+        ul{
+              flex: 1 0 900px;
+              word-spacing:10px;
+            text-align: start;
+            display: block;
+        }
+        li{
+            display: inline-block;
+            color: white;
+          
+
+        }
+        li a{
+             color: white;
+             text-decoration:none
+        }
+
+        main{
+            display: flex;
+            flex-flow: wrap nowrap ;
+        }
+       #conteiner_div_main{
+           
+            flex: 1 0 950px;
+          
+            
+        }
+        #conteiner_tipo{
+              margin-bottom: 30px;
+        }
+        #alinhamento_main{
+             flex: 1 0 160px;
+        }
+        main h1 {
+            font-size: 3.5em;
+            font-weight: 100;
+            padding: 50px 0;
+        }
+        #ano , #mes, #dia{
+           width: 100px;
+           height: 40px;
+           font-size: 1em;
+           text-align: center;
+           border: 1px solid rgba(0, 0, 0, 0.377);
+           margin-right: 15px;
+           
+        }
+        #tipo, #discriçao{
+             height: 40px;
+             width: 455px;
+              border: 1px solid rgba(0, 0, 0, 0.377);
+                margin-right: 50px;
+                 font-size: 1em;
+        }
+        #tipo{
+              width: 350px;
+               font-size: 1em;
+        }
+        #valor{
+            width: 100px;
+             height: 40px;
+             border: 1px solid rgba(0, 0, 0, 0.377);
+                margin-right: 50px;
+                 font-size: 1em;
+        }
+        button{
+            padding:0px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+           
+        }
+    </style>
+    <header>
+        <nav>
+          <div id="div_img"><img src="logo.png" alt="porco_finaça"></div>
+            <ul>
+                <li><a href="index.html">Cadastro</a></li>
+                <li><a href="">Consulta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+          <div id="alinhamento_main"></div>
+        <div id="conteiner_div_main">
+            <h1>Registro de nova despesas</h1>
+            <div id="conteiner_tipo">
+                <select name="ano" id="ano"><option value="1">2026</option></select>
+                <select name="mes" id="mes"><option value="janeiro">Janeiro</option>
+                <option value="fevereiro">Fevereiro</option>
+            <option value="março">Março</option>
+                <option value="abril">Abril</option></select>
+                <input type="number" name="dia" id="dia" placeholder="Dia">
+                <select name="tipo" id="tipo"><option value="alimentaçao">Alimentação</option></select>
+            </div>
+         
+            <div id="conteiner_discriçao">
+                <input type="text" id="discriçao" placeholder="Discrição">
+                <input type="text" id="valor" placeholder="Valor">
+                <button>+</button>
+
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
