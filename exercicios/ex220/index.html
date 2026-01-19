@@ -1,28 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
+    body{}
+
+
     #conteiner{
+        width: 500px;
+        height: 300px;
+        background-color: blue;
+        margin: auto;
+        position: relative;
+        top: 50vh;
+        transform: translateY(-50%);
         display: flex;
-        background-color: aqua;
-        flex-flow:column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+     
+       
     }
-    #filho{
+    .item{
+        width: 100%;
+        height: 100%;
+     
+            transition: 1s ease-in;
+       
+       
+      
+        position: absolute;
+         z-index: -1;
+        
+    }
+    .t{
+         transition: 0s ease-in;
+        
+    }
+    .active{
+         
+        
+       
+            transform: translateX(0);
+        opacity: 1;
+           transition: 1s ease-in;
+    z-index: 3;
+    }
+    #red{
+        background-color: red;
 
     }
+    #green{
+        background-color: green;
+    }
+    #black{
+        background-color: black;
+    }
+    
 
 </style>
 <body>
     <div id="conteiner">
-        <div id="filho">1</div>
-        <div id="filho">2</div>
-        <div id="filho">3</div>
-        <div id="filho">4</div>
+        <div class="item active" id="red">ttttt</div>
+        <div class="item" id="green">ttttt</div>
+        <div class="item" id="black">ttttttt</div>
+     
     </div>
+    <button class="btn"><</button>
+    <button class="btn">></button>
     
 </body>
 <script src="index.js"></script>
