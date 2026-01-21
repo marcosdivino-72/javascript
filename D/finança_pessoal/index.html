@@ -17,19 +17,28 @@
             <ul>
 
                 <li>Cadastro</li>
-                <li>Consuta</li>
+                <li><a href="consulta.html">Consuta</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="titulo"><h1>Registro de nova despesa</h1></div>
+        <div class="titulo"><h1>Registro de nova despesa</h1>
+
+      
+        
+        
+        
+        </div>
+              <div class="divregistro">
+                  <p class="verificaregisto pdesatifado"></p>
+              </div>
         <div class="tipo"><select name="ano" id="ano">
-                <option value="ano">Ano</option>
+                <option value="">Ano</option>
                 <option value="2026">2026</option>
             </select>
             <select name="mes" id="mes">
-                <option value="mes">Mes</option>
+                <option value="">Mes</option>
                 <option value="1">Janeiro</option>
                 <option value="2">Fevereiro</option>
                 <option value="3">Março</option>
@@ -43,9 +52,9 @@
                 <option value="11">Novembro</option>
                 <option value="12">Dezembro</option>
             </select>
-            <input type="text" name="dia" id="dia" placeholder="Dia">
+            <input type="text" name="dia" id="dia" placeholder="Dia" autocomplete="off">
             <select name="tipo" id="tipo">
-                <option value="tipo">Tipo</option>
+                <option value="">Tipo</option>
                 <option value="alimentaçao">Alimentação</option>
                 <option value="educaço">Educação</option>
                 <option value="Lazer">Lazer</option>
@@ -53,13 +62,14 @@
             </select>
         </div>
         <div class="descriçao">
-            <input type="text" name="descriçao" id="descriçao" placeholder="Descrição">
-            <input type="text" name="valor" id="valor" placeholder="Valor">
-            <button>+</button>
+            <input type="text" name="descriçao" id="descriçao" placeholder="Descrição" autocomplete="off">
+            <input type="text" name="valor" id="valor" placeholder="Valor" autocomplete="off">
+            <div class="btn"><button id="btn">+</button></div>
 
         </div>
     </main>
 
 </body>
+<script src="index.js"></script>
 
 </html>

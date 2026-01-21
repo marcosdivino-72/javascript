@@ -18,10 +18,11 @@ header{
     height: 70px;
 }
 .log{
-    
+    display: flex;
     flex:0 1 200px;
- display: flex;
- justify-content: end;
+justify-content: end;
+align-items: center;
+
 }
 
 
@@ -30,19 +31,42 @@ ul{
     display: flex;
     gap: 20px;
     margin-right: 110px;
+   
+}li{
+ position: relative;
+ cursor: pointer;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+ul li::after{
+    content: "";
+    position: absolute;
+   left: 0;
+    top: 20px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(42, 165, 48);
+    transition: 0.3s ease-in;
+
+}
+ul li:hover::after{
+     width: 100%;
+      transition: 0.3s ease-in;
 }
 
 main{
+   
   
     width: 70vw;
  
 
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+   
     gap: 20px;
-background-color: brown;
+
     margin: auto;
 
 }
@@ -89,11 +113,86 @@ select{
     gap: 20px;
 }
 .tipo, .descriçao{
-    width: 100%;
+ 
     align-self: center;
+    display: flex;
 }
 button{
     padding: 10px;
     margin: 0 18px;
+    background-color: #0659b3;
+    color: #fff;
+}
+main div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100;
+    margin: auto;
+}
+.verificaregisto{
+    text-align: center;
+    color: #fff;
+
+    
+    width: 100%;
+    opacity: 1;
+
+}
+.pdesatifado{
+    transition: .3s ease-in;
+opacity: 0;
+}
+.divregistro{
+width: 100%;
+height:  20px;
+}
+
+.listadespesa{
+     width: 80%;
+    background-color: #d9dbdd;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.lista{
+    min-width: 80%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#lista{width: 100%;
+   }
+@media screen and (max-width: 930px){
+    main{
+        gap: 0;
+    }
+.tipo, .descriçao{
+ width: 100%;
+   flex-flow: column;
+    display: flex;
+    gap: 0;
+    margin: 0;
+}
+select, input , #dia,#tipo,#descriçao{
+    width: 100%;
+
+}
+div{width: 100%;
+    position: relative;
+   
+   
+
+}
+.btn{
+ display: flex;
+  justify-content: flex-end;
+ 
+}
+
+
+
+
+
 }
 

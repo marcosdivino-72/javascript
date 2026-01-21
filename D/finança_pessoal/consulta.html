@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta registros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header>
+        <div class="log"><img src="logo.png" alt="log"></div>
+        <nav>
+            <ul>
+
+                <li><a href="index.html">Cadastro</a></li>
+                <li>Consuta</li>
+            </ul>
+        </nav>
+    </header> 
+    
+    <main>
+        <div class="titulo"><h1>Consulta de despesas</h1>
+
+      
+        
+        
+        
+        </div>
+              <div class="divregistro">
+                  <p class="Consulta de despesas"></p>
+              </div>
+        <div class="tipo"><div>
+            <select name="ano" id="ano">
+                    <option value="">Ano</option>
+                    <option value="2026">2026</option>
+                </select>
+        </div>
+            <div>
+                <select name="mes" id="mes">
+                    <option value="">Mes</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+            <div><input type="text" name="dia" id="dia" placeholder="Dia" autocomplete="off"></div>
+            <div>
+                <select name="tipo" id="tipo">
+                    <option value="">Tipo</option>
+                    <option value="alimentaçao">Alimentação</option>
+                    <option value="educaço">Educação</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="saude">Saúde</option>
+                </select>
+            </div>
+        </div>
+        <div class="descriçao">
+            <div><input type="text" name="descriçao" id="descriçao" placeholder="Descrição" autocomplete="off"></div>
+            <div><input type="text" name="valor" id="valor" placeholder="Valor" autocomplete="off"></div>
+            <div class="btn"><button id="btn">+</button></div>
+
+        </div>
+        <div id="lista">
+            <div class="listadespesa">
+                 <hr>
+               <div class="lista">
+                <p>Data</p>
+                <p>Tipo</p>
+                <p>Descrição</p>
+                <p>valor</p>
+            
+            </div>
+                <hr>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
