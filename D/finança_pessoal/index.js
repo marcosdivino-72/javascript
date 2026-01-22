@@ -1,6 +1,8 @@
 
+if( document.querySelector("#btn")!=null){const btn = document.querySelector("#btn").addEventListener("click", registro)}
 
-const btn = document.querySelector("#btn").addEventListener("click", registro)
+if( document.querySelector("#btnC")!=null){const btnC = document.querySelector("#btnC").addEventListener("click", pesquisaDados)}
+
 
 
 
@@ -62,26 +64,64 @@ class Bd{
         localStorage.setItem(id,JSON.stringify(d))
 
    }
+   carregalista(){
+
+     let id = parseInt (localStorage.getItem("id"))
+    let lista = []
+    for(let i=1; i<= id;i++){
+        
+        lista.push(JSON.parse(localStorage.getItem(i)))
+
+    }
+   
+    return lista
+   }
+   pesquisa(ano , mes , dia , tipo){
+
+  
+    let lista = this.carregalista()
+   const listafilter= lista.filter((e)=>{return e.ano==ano}).filter((e)=>{return e.mes==mes}).filter(e=>{return e.dia==dia}).filter(e=>{return e.tipo==tipo})
+
+  
+        
+
+  
+
+   }
   
 }
+function pesquisaDados(){
 bd = new Bd()
+bd.pesquisa(ano.value,mes.value,dia.value,tipo.value)
+
+}
+bd = new Bd()
+
 function registro(){
 
 let items=[ano.value, mes.value,dia.value, tipo.value,descriçao.value, valor.value]
 despesa = new Despesa(...items)
  
- console.log(despesa)
+
   if(despesa.verificar()==true){
     p.innerHTML="Despesa cadastrada com susseco!!!"
     p.style.backgroundColor="green"
     p.classList="verificaregisto"
       bd.gravar(despesa)
+    ano.value=""
+     mes.value=""
+     dia.value=""
+     tipo.value=""
+     descriçao.value=""
+     valor.value=""
       fpopup()
   }else{
  p.innerHTML="Preencha todos os campos"
     p.style.backgroundColor="red"
      p.classList="verificaregisto"
+     
      fpopup()
+     
   }
 
   
@@ -101,22 +141,33 @@ function fpopup(){
 let popup =setTimeout(()=>{
 
       p.classList="verificaregisto pdesatifado"
-      console.log("p")
+  
       clearTimeout(popup)
 
 },2000)}
 
-function carregaLista(){
-    let id = parseInt (localStorage.getItem("id"))
-    let lista = []
-    for(let i=1; i<= id;i++){
-        
-        lista.push(JSON.parse(localStorage.getItem(i)))
+function carregaListaDespesa(){
+   let lista =Array()
+   lista=bd.carregalista()
+   var tbody = document.querySelector("#tbody_lista")
+   console.log(lista)
+   lista.forEach((e,i) => {
+  
+  let linha= tbody.insertRow()
+ linha.insertCell(0).innerHTML=`${e.dia}/${e.mes}/${e.ano}`
+   linha.insertCell(1).innerHTML=e.tipo
+   linha.insertCell(2).innerHTML=e.descriçao
+   linha.insertCell(3).innerHTML=e.valor
 
-    }
-    console.log(lista)
+    
+
+
+    
+   });
+
+
 }
-carregaLista()
+
 
  
 
