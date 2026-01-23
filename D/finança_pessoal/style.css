@@ -122,6 +122,11 @@ button{
     margin: 0 18px;
     background-color: #0659b3;
     color: #fff;
+    border-radius: 8px;
+}
+btnC{
+    text-align: center;
+
 }
 main div{
     display: flex;
@@ -168,6 +173,27 @@ height:  20px;
   position: relative;
  
     width: 100%;
+   }
+   tr{
+    
+    background-color: #007BFF;
+    border: 1px solid black;
+    color: #fff;
+   }
+   #thh{
+    width: 80px;
+   }
+   #thd{
+    width: 200px;
+   }
+   #thdt{
+    width: 50px;
+   }
+      #tht{
+    width: 100px;
+   }
+   td{
+    border: 1x solid black;
    }
 @media screen and (max-width: 930px){
     main{

@@ -71,6 +71,9 @@ class Bd{
     for(let i=1; i<= id;i++){
         
         lista.push(JSON.parse(localStorage.getItem(i)))
+        if(lista[lista.length-1]==null){
+            lista.pop()
+        }
 
     }
    
@@ -80,7 +83,9 @@ class Bd{
 
   
     let lista = this.carregalista()
-   const listafilter= lista.filter((e)=>{return e.ano==ano}).filter((e)=>{return e.mes==mes}).filter(e=>{return e.dia==dia}).filter(e=>{return e.tipo==tipo})
+   const listafilter= lista.filter((e)=>{return e.ano==ano||ano==""}).filter((e)=>{return e.mes==mes|| mes==""}).filter(e=>{return e.dia==dia||dia==""}).filter(e=>{return e.tipo==tipo||tipo==""})
+
+   carregaListaDespesa(listafilter)
 
   
         
@@ -104,6 +109,7 @@ despesa = new Despesa(...items)
  
 
   if(despesa.verificar()==true){
+    
     p.innerHTML="Despesa cadastrada com susseco!!!"
     p.style.backgroundColor="green"
     p.classList="verificaregisto"
@@ -146,13 +152,25 @@ let popup =setTimeout(()=>{
 
 },2000)}
 
-function carregaListaDespesa(){
-   let lista =Array()
-   lista=bd.carregalista()
-   var tbody = document.querySelector("#tbody_lista")
-   console.log(lista)
-   lista.forEach((e,i) => {
+function carregaListaDespesa(e){
+ let lista =Array()
+  var tbody = document.querySelector("#tbody_lista")
+    if(e==undefined){
+        
+         lista=bd.carregalista()
+         
+    }else{
+        tbody.innerHTML=""
+lista=e
+    }
   
+  
+  
+   console.log(lista)
+   lista.forEach((e) => {
+  if(e==null){
+    return
+  }
   let linha= tbody.insertRow()
  linha.insertCell(0).innerHTML=`${e.dia}/${e.mes}/${e.ano}`
    linha.insertCell(1).innerHTML=e.tipo
