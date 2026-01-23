@@ -6,71 +6,60 @@
     <title>Document</title>
 </head>
 <style>
-    body{}
-
-
-    #conteiner{
-        width: 500px;
-        height: 300px;
-        background-color: blue;
-        margin: auto;
-        position: relative;
-        top: 50vh;
-        transform: translateY(-50%);
+    *{margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
         display: flex;
         justify-content: center;
+        flex-flow: row nowrap;
         align-items: center;
-        overflow: hidden;
-     
-       
+        height: 100vh;
     }
-    .item{
-        width: 100%;
-        height: 100%;
-     
-            transition: 1s ease-in;
-       
-       
-      
-        position: absolute;
-         z-index: -1;
-        
-    }
-    .t{
-         transition: 0s ease-in;
-        
-    }
-    .active{
-         
-        
-       
-            transform: translateX(0);
-        opacity: 1;
-           transition: 1s ease-in;
-    z-index: 3;
-    }
-    #red{
-        background-color: red;
 
-    }
-    #green{
-        background-color: green;
-    }
-    #black{
-        background-color: black;
-    }
+.carrossel{
+    background-color: aqua;
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+   
+}
+#conteiner{
+    display: flex;
+   
+    transform: translateX(0);
+    transition: .3s ease-in-out;
+
+}
+.item{
+ min-width: 500px;
+ height: 100vh;
+    background-color: blue;
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#black{
+    background-color: black;
+}
     
 
 </style>
 <body>
-    <div id="conteiner">
-        <div class="item active" id="red">ttttt</div>
-        <div class="item" id="green">ttttt</div>
-        <div class="item" id="black">ttttttt</div>
-     
+    <div class="carrossel">
+        <div id="conteiner">
+            <div class="item " id="red">ttttt</div>
+            <div class="item" id="green">ttttt</div>
+            <div class="item" id="black">ttttttt</div>
+        
+        </div>
     </div>
-    <button class="btn"><</button>
-    <button class="btn">></button>
+   
+
     
 </body>
 <script src="index.js"></script>
