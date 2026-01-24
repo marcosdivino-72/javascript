@@ -61,6 +61,7 @@ class Bd{
     gravar(d){
 
         let id = this.getProximoId()
+        
         localStorage.setItem(id,JSON.stringify(d))
 
    }
@@ -69,10 +70,14 @@ class Bd{
      let id = parseInt (localStorage.getItem("id"))
     let lista = []
     for(let i=1; i<= id;i++){
-        
+       
         lista.push(JSON.parse(localStorage.getItem(i)))
+        
+        console.log(lista)
+        
         if(lista[lista.length-1]==null){
             lista.pop()
+            
         }
 
     }
@@ -176,6 +181,10 @@ lista=e
    linha.insertCell(1).innerHTML=e.tipo
    linha.insertCell(2).innerHTML=e.descriçao
    linha.insertCell(3).innerHTML=e.valor
+   let btnr= document.createElement("button")
+   btnr.innerHTML="X"
+   btnr.style.background="red"
+   linha.insertCell(4).appendChild(btnr)
 
     
 
