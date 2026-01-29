@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>Cadastro</h1></div>
+        <nav>
+            <ul>
+                <li>Opição1</li>
+                <li>Opiçao2</li>
+              
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="title"><h1>Cadastros alunos</h1></div>
+            <div class="div_form">
+                <div class="div_nome for">
+                    <label for="nome">Nome do aluno:</label>
+                    <input type="text" name="nome" id="nome" autocomplete="off">
+                </div>
+                <div class="div_idade for">
+                    <label for="idade">Idade do aluno:</label>
+                    <input type="text" name="idade" id="idade"autocomplete="off">
+                </div>
+                <div class="for"><label for="nota ">Nota do aluno:</label>
+                    <input type="text" name="nota" id="nota"autocomplete="off">
+                </div>
+                <div class="div_btn for" ><button id="btn">Cadastar</button></div>
+
+            </div>
+        </section>
+        <section>
+            <table>
+                <thead>
+                <tr class="tr">
+                    <th class="start">Nome</th>
+                    <th class="center">Idade</th>
+                    <th class="end">Situação</th>
+                </tr class="tr">
+                </thead>
+                <tbody id="tb"></tbody>
+            </table>
+        </section>
+    </main>
+    
+</body>
+<script src="index.js"></script>
+</html>
