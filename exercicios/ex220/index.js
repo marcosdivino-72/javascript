@@ -1,69 +1,92 @@
-/*Crie um novo array com o dobro de cada número em dados.
 
-Crie um array só com os nomes dos usuários.
+const canvas = document.querySelector("canvas")
 
-Crie um novo array apenas com os números maiores que 10.
+const ctx = canvas.getContext("2d")
 
-Crie um novo array apenas com usuários maiores de 18.
+ctx.fillStyle="blue"
+const size =30;
+let v = 1
+let ponto_colisao_i
+let ponto_colisao_f
+const bola = {x:300,y:300,r:10,vx:2,vy:2}
+const player ={x:220,y:500}
 
-Encontre o primeiro usuário da cidade "SP".
 
-Encontre o índice do usuário chamado "Diana".
 
-Verifique se o número 130 existe em dados.
 
-Verifique se existe algum usuário menor de 16.
+let direction_ball=0
+let px=0
+let b = false
 
-Verifique se todos os usuários são maiores de 14.
+function drawplayer(){
 
-Some todos os números do array dados.
+  ctx.fillRect(player.x,player.y,100,10)
+}
+function draw(){
+ ctx.beginPath(); // começa o desenho
+  ctx.arc(bola.x, bola.y, bola.r, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
+  ctx.fill();
+}
+function colisao(){
+ponto_colisao_i =player.x
+ponto_colisao_f=player.x+100
+if(bola.x<0||bola.x>600){
+  direction_ball=direction_ball*-1
+}
 
-Conte quantas vezes cada letra aparece.
 
-Crie um objeto no formato { nome: idade }.
 
-Ordene dados em ordem crescente.
+if(bola.y==500){
 
-Junte dados com [200, 300].
+  if(bola.x>ponto_colisao_i && bola.x<ponto_colisao_f){
+    v=-v
+    let valor = (bola.x-player.x)/100
+    direction_ball=(0.5-valor)*-1
+  
+  }
+}
 
-Remova o número na posição 2 do array dados.
+}
 
-Pegue do índice 1 ao 4 sem alterar o original.*/
+function moveplayer(){
+  addEventListener("keydown",e=>{
+    if(e.key=="a"&&e.key!="d"){
+    px=-1
+    console.log(px)
+    b=true
+    }
+    if(e.key=="d"&&e.key!="a"){
+     px=1
+     b=true
+    }
+  })}  addEventListener("keyup",()=>{
+px=0
+  
+})
+function movep(){
+player.x+=px
+}
+function move(){
+if(bola.y==600){
+v=-1
+}
+if(bola.y==0){
+  v=1
+}
+  bola.y+=v
+  bola.x+=direction_ball
+  
+}
 
-const dados = [5, 12, 8, 130, 44, 3];
+setInterval(()=>{
+ctx.clearRect(0,0,600,600)
+move()
 
-const usuarios = [
-  { id: 1, nome: "Ana", idade: 17, cidade: "SP" },
-  { id: 2, nome: "Bruno", idade: 22, cidade: "RJ" },
-  { id: 3, nome: "Carlos", idade: 15, cidade: "SP" },
-  { id: 4, nome: "Diana", idade: 30, cidade: "MG" },
-  { id: 5, nome: "Edu", idade: 19, cidade: "RJ" }
-];
-
-const letras = ["a", "b", "a", "c", "b", "a"];
-
-//1
-const dobro_dados = dados.map(e=>e*2)
-//2
-const nome_usuario=usuarios.map(e=>e.nome)
-//3
-const numero_maior_10 = dados.filter(e=>e>10)
-//4
-const usuario_maior_18=usuarios.filter(e=>e.idade>18)
-//5
-const usuario_de_sp= usuarios.find(e=>e.cidade=="SP")
-//6
-const indece_diana = usuarios.findIndex(e=>e.nome=="Diana")
-//7
-const check_numero_130 = dados.includes(130)
-//8
-const existe_usuario_maior_16 = usuarios.some(e=>e.idade<16)
-//9
-const todos_maior_14 = usuarios.every(e=>e.idade>14)
-//10
-const soma_numeros = dados.reduce((acc,num)=>acc+num)
-//11
-const conta_letra = letras.reduce((acc,l)=>{
-  acc= (acc[l]||0)+1
-  return acc
-},{})
+colisao()
+movep()
+drawplayer()
+draw()
+ 
+},0)
+ moveplayer()
