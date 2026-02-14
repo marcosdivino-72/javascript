@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        canvas{background-color: black;}
+       
+       select{
+        size: 3;
+       }
       
       
     </style>
 </head>
 <body>
-   <canvas width="600px" height="600px"></canvas>
+  ​​<form>
+  <label  for="acessorios">Escolha os acessórios:</label><br>
+  <select size="1" id="acessorios" name="acessorios" multiple>
+    <option value="oculos">Óculos</option>
+    <option value="chapeu">Chapéu</option>
+    <option value="cinto">Cinto</option>
+  </select>
+</form>
     
 </body>
 <script src="index.js"></script>
