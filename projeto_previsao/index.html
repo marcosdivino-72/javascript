@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previsao do tempo</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
 </svg>
 </head>
 <body>
-    <main><input type="text" name="city" id="city">
-    <button><i class="bi bi-search"></i></button></main>
+    <main><div class="conteiner_pesquisa">
+      <button class="icon_local"><i class="bi bi-geo-alt-fill"></i></button>
+      <input type="text" name="city" id="city">
+      <button><i class="bi bi-search"></i></button>
+    </div>
+    <div class="city"><h1 class="city_name">city</h1></div>
+    <div class="info_temp">
+     
+      <div class="img_tem"><img  class="img_temp" src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></div><div class="descrition_temp"><h1 class="temp">20.78 <sup>c°</sub></h1>
+      <p class="description">algumas nuvens</p></div>
+
+    </div>
+  </main>
 
     
     
