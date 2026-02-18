@@ -1,5 +1,5 @@
 const city = document.querySelector("#city")
-const btn = document.querySelector("button")
+const btn = document.querySelector(".btn")
 const text_temp = document.querySelector(".temp")
 const description = document.querySelector(".description")
 const city_name = document.querySelector(".city_name")
